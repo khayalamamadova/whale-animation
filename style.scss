@@ -1,0 +1,390 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    background-image:linear-gradient(to bottom,#FF6DB5, #662C48 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.whale-head{
+    width: 360px;
+    height: 180px;
+    background-color: rgb(206,34,140);
+    border-top-left-radius: 180px;
+    border-top-right-radius: 180px;
+    border: #47413B 5px solid;
+    border-bottom: none;
+    overflow: hidden;
+    position: relative;
+    .dot1{
+        width: 45px;
+        height: 45px;
+        background-color: rgb(245,33,150);
+        position: absolute;
+        transform: translate(120px,55px);
+        border-radius: 45px;
+        box-shadow: 5px 5px 5px rgb(234,36,144) inset;
+    }
+    .dot2{
+        width: 25px;
+        height: 25px;
+        background-color: rgb(245,33,150);
+        position: absolute;
+        transform: translate(200px,20px);
+        border-radius: 25px;
+        box-shadow: 5px 5px 5px rgb(234,36,144) inset;
+    }
+    
+}
+
+
+.whale-head::before{
+    content: '';
+    position: absolute;
+    width: 320px;
+    height: 160px;
+    background-color: rgb(255,33,151);
+    border-bottom-left-radius: 180px;
+    border-bottom-right-radius: 180px;
+   
+}
+.line{
+    width: 450px;
+    height: 5px;
+    background-color: #47413B;
+}
+
+
+.whale-body{
+    position: relative;
+    width: 360px;
+    height: 180px;
+    border-bottom-left-radius: 180px;
+    border-bottom-right-radius: 180px;
+    background-color: rgb(39,33,75);
+    border: #47413B 5px solid;
+    border-top: none;
+    overflow: hidden;
+    .eye{
+        width: 20px;
+        height: 20px;
+        background-color: #2F2E36;
+        border-radius: 25px;
+        transform: translate(230px, 30px);
+        transition: 1s linear all;
+        animation-name: eye;
+        animation-duration: 0.5s;
+        animation-iteration-count: 3;
+        animation-timing-function: steps(1);
+        display: block;
+    }
+    .mouth{
+        width: 120px;
+        height: 60px;
+        background-color: rgb(186,202,222);
+        border: solid 2px black;
+        position: absolute;
+        display: block;
+        border-top-left-radius: 60px;
+        border-top-right-radius: 60px;
+        transform: translate(240px, 35px) rotate(-70deg);
+    }
+
+}
+
+
+/*
+@keyframes eye {
+    0%{
+        width: 20px;
+        height: 20px;
+        background-color: #2F2E36;
+        display: block;
+    }
+    50%{
+        width: 20px;
+        height: 3px;
+        background-color: #2F2E36;
+        display: block;
+
+
+    }
+
+}*/
+
+.whale-body::before{
+    content: '';
+    position: absolute;
+    width: 345px;
+    height: 155px;
+    background-color: rgb(89,76,168);
+    border-bottom-left-radius: 140px ;
+    border-bottom-right-radius: 140px ;
+    border: solid transparent;
+
+
+}
+
+.mouth::before{
+    width: 80px ;
+    height: 5px;
+    background-color: rgb(49,55,58);
+    content: '';
+    position: absolute;
+    transform: translate(20px,15px);
+    border-radius: 25%;
+
+}
+
+.mouth::after{
+    width: 90px ;
+    height: 5px;
+    background-color: rgb(49,55,58);
+    content: '';
+    position: absolute;
+    transform: translate(20px,33px);
+    border-radius: 25%;
+
+}
+
+.hand{
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    border-radius: 25px;
+    border: #47413B 5px solid;
+    background-color: rgb(89,76,168);
+    overflow: hidden;
+    animation-name: hand-move;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    transition: all 1s linear;
+    border-right: none;
+    margin-top: 135px;
+}
+
+.hand::before{
+    content: '';
+    position: absolute;
+    width: 42px;
+    height: 15px;
+    background-color: rgb(30,26,57);
+    border-bottom-left-radius: 140px ;
+    border-bottom-right-radius: 140px ;
+    border: solid transparent;
+    transform: translate(-13px,15px) rotate(90deg);
+   
+}
+
+@keyframes hand-move {
+    0%{
+        transform: rotate(-65deg) translate(-155px,60px);
+    }
+    50%{
+        transform: rotate(-65deg) translate(-155px,55px);
+
+    }
+    100%{
+        transform: rotate(-65deg) translate(-155px,60px);
+    }
+}
+
+.stars1{
+    width: 5px;
+    height: 20px;
+    background-color: rgb(234,24,147);
+    position: relative;
+    transform: translateY(-70px);
+    border-radius: 25%;
+    animation-name: star-shine;
+    animation-duration: 500ms ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all 1s linear;
+}
+
+.stars1::after{
+    position: absolute;
+    content: '';
+    margin: auto;
+    width: 5px;
+    height: 20px;
+    background-color: rgb(234,24,147);
+    transform: rotate(-90deg);
+    border-radius: 25%;
+    animation-name: star-shine;
+    animation-duration: 500ms ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all 1s linear;
+
+}
+
+@keyframes star-shine {
+    0%{
+        background-color: rgb(234,24,147);
+    }
+    50%{
+        background-color: rgb(148,11,124);
+    }
+    100%{
+        background-color: rgb(249,23,148);
+    }
+}
+
+
+
+.stars2{
+    width: 5px;
+    height: 20px;
+    background-color: rgb(234,24,147);
+    position: relative;
+    transform: translate(150px,-35px);
+    border-radius: 25%;
+    animation-name: star-shine;
+    animation-duration: 500ms ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all 1s linear;
+}
+
+.stars2::after{
+    position: absolute;
+    content: '';
+    margin: auto;
+    width: 5px;
+    height: 20px;
+    background-color: rgb(234,24,147);
+    transform: rotate(-90deg);
+    border-radius: 25%;
+    animation-name: star-shine;
+    animation-duration: 500ms ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all 1s linear;
+
+}
+
+@keyframes star-shine {
+    0%{
+        background-color: rgb(234,24,147);
+    }
+    50%{
+        background-color: rgb(148,11,124);
+    }
+    100%{
+        background-color: rgb(249,23,148);
+    }
+}
+
+
+.stars3{
+    width: 5px;
+    height: 20px;
+    background-color: rgb(234,24,147);
+    position: relative;
+    transform: translate(-200px,40px);
+    border-radius: 25%;
+    animation-name: star-shine;
+    animation-duration: 500ms ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all 1s linear;
+}
+
+.stars3::after{
+    position: absolute;
+    content: '';
+    margin: auto;
+    width: 5px;
+    height: 20px;
+    background-color: rgb(234,24,147);
+    transform: rotate(-90deg);
+    border-radius: 25%;
+    animation-name: star-shine;
+    animation-duration: 500ms ;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transition: all 1s linear;
+
+}
+
+
+
+.clouds{
+    position: relative;
+    width: 160px;
+    height:75px;
+    background-color: rgb(255,5,255);
+    border-radius: 50px;
+    transform: translate(-135px,125px);
+    border: 3px solid rgb(234,22,209);
+    animation: clouds-dance;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    transition: all ease-in-out 1s;
+    
+}
+
+.clouds::before{
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 70px;
+    background-color: rgb(255,5,255);
+    border-radius: 50px;
+    transform: translate(35px,-35px) rotate(-90deg);
+    border-right: 3px solid rgb(234,22,209);
+}
+
+@keyframes clouds-dance {
+    50%{
+        transform: translate(-70px,125px);
+    }
+    100%{
+        transform: translate(-135px,125px);
+
+    }
+}
+
+.clouds1{
+    position: relative;
+    width: 160px;
+    height:75px;
+    background-color: rgb(255,5,255);
+    border-radius: 50px;
+    border: 3px solid rgb(234,22,209);
+    transform: translate(200px, 125px);
+    animation: clouds-dance1;
+    animation-duration: 5s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    transition: all ease-in-out 1s;
+    
+}
+
+.clouds1::before{
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 70px;
+    background-color: rgb(255,5,255);
+    border-radius: 50px;
+    transform: translate(35px,-35px) rotate(-90deg);
+    border-right: 3px solid rgb(234,22,209);
+}
+
+@keyframes clouds-dance1 {
+    50%{
+        transform: translate(250px,125px);
+    }
+    100%{
+        transform: translate(200px, 125px);
+
+    }
+}
